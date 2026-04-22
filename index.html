@@ -1,91 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-791743747">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-791743747');
-</script>
-    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transporte Enrique Sánchez</title>
+<title>Transporte Enrique Sánchez | Tosca y Materiales</title>
 
 <style>
-body {font-family: Arial, sans-serif; margin:0; background:#f4f4f4; color:#333;}
+/* ESTILOS GENERALES */
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#f8f9fa; color:#333; line-height: 1.6;}
 
 header {
-    background:url('20230414_170606.jpg') center/cover no-repeat;
-    height:70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('trabajo2.jpg') center/cover no-repeat;
+    height:75vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     color:white;
-    text-shadow:1px 1px 4px black;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.8);
     text-align:center;
     padding:20px;
 }
 
 header img {
-    max-width:200px;
+    max-width:180px;
     background:white;
     padding:10px;
-    border-radius:10px;
+    border-radius:12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
 }
 
 .buttons a {
     display:inline-block;
     margin:10px;
-    padding:15px 25px;
+    padding:16px 32px;
     background:#25D366;
     color:white;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:50px;
     font-weight:bold;
+    transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 .call {background:#007BFF !important;}
+.buttons a:hover {transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2);}
 
-section {padding:40px 20px; text-align:center;}
+section {padding:60px 20px; text-align:center; max-width: 1100px; margin: auto;}
+
+/* DISEÑO DE GALERÍA PROFESIONAL */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 30px 0;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
 
 .gallery img {
-    width:300px;
-    margin:10px;
-    border-radius:10px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
-footer {
-    background:#222;
-    color:white;
-    padding:20px;
-    text-align:center;
+.gallery-text {
+    padding: 15px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #444;
 }
+
+footer { background:#222; color:white; padding:40px; text-align:center; font-size: 0.9rem;}
 
 /* BOTON FLOTANTE WHATSAPP */
 .whatsapp-float {
     position:fixed;
-    width:60px;
-    height:60px;
-    bottom:20px;
-    right:20px;
+    width:65px;
+    height:65px;
+    bottom:25px;
+    right:25px;
     background-color:#25D366;
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    box-shadow:2px 2px 10px rgba(0,0,0,0.3);
+    box-shadow:2px 4px 15px rgba(0,0,0,0.4);
     z-index:1000;
 }
+.whatsapp-float img { width:38px; height:38px; }
 
-.whatsapp-float img {
-    width:35px;
-    height:35px;
+/* AJUSTE PARA MOVILES */
+@media (max-width: 600px) {
+    header { height: 85vh; }
+    h1 { font-size: 1.8rem; }
 }
 </style>
 </head>
@@ -93,43 +114,85 @@ footer {
 <body>
 
 <header>
-    <img src="LOGO EAS COLOR.jpg" alt="Logo">
+    <img src="LOGO EAS COLOR.jpg" alt="Logo EAS">
     <h1>Transporte Enrique Sánchez</h1>
-    <p>Más de 10 años brindando soluciones en transporte de tosca</p>
-    <p><strong>Disponibilidad permanente para entrega en el día</strong></p>
+    <p>Venta y transporte de tosca • Movimiento de suelos</p>
+    <p><strong>Atención inmediata a Obras, Acopios, Barrios Cerrados y Constructoras</strong></p>
     <div class="buttons">
-        <a href="https://wa.me/542304566872">WhatsApp</a>
-        <a href="tel:2304566872" class="call">Llamar</a>
+        <a href="https://wa.me/542304566872">Presupuesto por WhatsApp</a>
+        <a href="tel:2304566872" class="call">Llamar Ahora</a>
     </div>
 </header>
 
-<section>
-<h2>Servicios</h2>
-<p>Transporte de Tosca • Entrega en Obras • Atención a Acopios • Constructoras y Desarrolladoras</p>
+<section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <p>Más de 10 años de experiencia brindando soluciones logísticas de aridos. Entrega de tosca seleccionada para plateas, bases y caminos. Contamos con flota propia para asegurar el cumplimiento en los plazos de obra.</p>
+</section>
+
+<section style="background: #ffffff; max-width: 100%;">
+    <h2>Trabajos Realizados</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="trabajo1.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Entrega de material en obra</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo2.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Unidades de transporte propias</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo3.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Tosca de primera calidad</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo4.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Servicio logístico integral</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="trabajo5.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Movimiento de suelos</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo6.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Rellenos y nivelación</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo7.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Logística en Zona Norte</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo8.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Atención a empresas</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo9.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Suministro de materiales</div>
+        </div>
+        <div class="gallery-item">
+            <img src="trabajo10.jpg" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-text">Compromiso y puntualidad</div>
+        </div>
+    </div>
 </section>
 
 <section>
-<h2>Ubicación</h2>
-<p>Somos de Los Cardales, pero entregamos en Campana, Escobar, Pilar, Luján, Moreno, General Rodríguez, Tigre y toda la zona norte</p>
-</section>
-    
-<section class="gallery">
-<h2>Trabajos Realizados</h2>
-<img src="20230414_170603.jpg">
-<img src="20230414_170606.jpg">
-<img src="20240926_090545.jpg">    
-<img src="IMG-20240712-WA0035.jpg">
+    <h2>Ubicación y Cobertura</h2>
+    <p>Estamos en <strong>Los Cardales</strong>. Brindamos cobertura completa en:</p>
+    <p>Escobar • Pilar • Luján • Moreno • General Rodríguez • Tigre • Campana • Exaltación de la Cruz</p>
+    <br>
+    <a href="https://share.google/GVuurYd0CTFnZQkL6" target="_blank" style="color: #007BFF; font-weight: bold; text-decoration: none;">Ver ubicación en Google Maps →</a>
 </section>
 
-<section>
-<h2>Contacto</h2>
-<p>Teléfono / WhatsApp: 2304 566872</p>
-<p>Email: eas.consultas@gmail.com</p>
-<p><a href="https://share.google/GVuurYd0CTFnZQkL6" target="_blank">Ver ubicación en Google Maps</a></p>
+<section style="background: #f1f1f1; max-width: 100%;">
+    <h2>Contacto</h2>
+    <p>Contactanos hoy mismo para obtener un presupuesto sin cargo.</p>
+    <p><strong>Teléfono / WhatsApp:</strong> 2304 566872 / 2304 523023</p>
+    <p><strong>Email:</strong> eas.consultas@gmail.com</p>
 </section>
 
 <footer>
-<p>© Transporte Enrique Sánchez</p>
+    <p>© 2026 Transporte Enrique Sánchez | Los Cardales, Buenos Aires</p>
 </footer>
 
 <a href="https://wa.me/542304566872" class="whatsapp-float" target="_blank">
